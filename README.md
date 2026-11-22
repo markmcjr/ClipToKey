@@ -66,3 +66,11 @@ Restart the app after changing them.
 - ClipToKey types whatever is on the clipboard, including line breaks, which a shell runs as Enter. Check what you copied before you trigger it.
 - Text is typed into whichever window has focus at that moment.
 - Nothing is stored, logged, or sent over the network. The clipboard is read only when you press the hotkey or the button.
+
+## Version
+
+The current version is 1.0.0. It is set as `__version__` at the top of `main.py` and shown in the bottom-right corner of the window.
+
+## License
+
+MIT. See [LICENSE](LICENSE).

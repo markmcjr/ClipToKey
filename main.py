@@ -7,6 +7,8 @@ from PySide6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout,
 from PySide6.QtCore import Signal, QObject, Qt
 from PySide6.QtGui import QFont
 
+__version__ = "1.0.0"
+
 # The hotkey combination
 HOTKEY = '<ctrl>+<alt>+v'
 
@@ -81,6 +83,12 @@ class ClipToKeyApp(QMainWindow):
         info_font = QFont("Helvetica", 8)
         info_label.setFont(info_font)
         layout.addWidget(info_label)
+
+        version_label = QLabel(f"v{__version__}")
+        version_label.setFont(QFont("Helvetica", 7))
+        version_label.setStyleSheet("color: gray;")
+        version_label.setAlignment(Qt.AlignRight)
+        layout.addWidget(version_label)
 
     def do_typing(self, text, delay=0):
         if delay > 0:
